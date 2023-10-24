@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> CARTUCHOS VLZ </title>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="pagina.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="estilos.css">
+    
+</head>
+
+
+<body class="body1">
+    <header class="encabezado">
+        <div>
+            <a href="index.html"> <img class= "medio  logo1" src="imagenes/vector-icon-of-printer.jpg"  > </a>
+            <h1 class=" medio cartuchos"> CartuchosVLZ </h1>
+                <a class="aRedes" href="https://www.instagram.com/cartuchosvlz/"> <img class="imgRedes" src="imagenes/instagram.png"> </a>
+                <a class="aRedes" href="https://www.facebook.com/CartuchosVlz"> <img class="imgRedes" src="imagenes/fb.png"> </a>
+                <a class="aRedes" href="https://www.whatsapp.com"> <img class="imgRedes" src="imagenes/whatsapp.png" > </a>
+            
+            <nav class="navbar navbar-dark bg-dark  navbar-expand-lg navbar-light bg-light">
+                <a class="navbar-brand" href="catalogo.html">Catalogo</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarText">
+                  <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                      <a class="nav-link" href="index.html">Inicio <span class="sr-only"></span></a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="Contactanos.html">Contacto</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="ubicacion.html">Ubicacion</a>
+                    </li>
+                  </ul>
+                  <span class="navbar-text container">
+                    Tu impresora no funciona sin nosotros
+                  </span>
+                </div>
+              </nav>
+    </header>
+    <main>
+      <form class="needs-validation" novalidate>
+        <div class="form-row">
+          <div class="col-md-4 mb-3">
+            <label for="validationCustom01">Nombre</label>
+            <input type="text" class="form-control" id="validationCustom01" placeholder="Nombre" value="Mark" required>
+            <div class="valid-feedback">
+              Looks good!
+            </div>
+          </div>
+          <div class="col-md-4 mb-3">
+            <label for="validationCustom02">Apellido</label>
+            <input type="text" class="form-control" id="validationCustom02" placeholder="Apellido" value="" required>
+            <div class="valid-feedback">
+              Looks good!
+            </div>
+          </div>
+          <div class="col-md-4 mb-3">
+            <label for="validationCustomUsername">Usuario</label>
+            <div class="input-group">
+              <div class="input-group-prepend">
+                <span class="input-group-text" id="inputGroupPrepend">@</span>
+              </div>
+              <input type="text" class="form-control" id="validationCustomUsername" placeholder="usuario" aria-describedby="inputGroupPrepend" required>
+              <div class="invalid-feedback">
+               Ingrese su nombre de usuario
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="col-md-6 mb-3">
+            <label for="validationCustom03">City</label>
+            <input type="text" class="form-control" id="validationCustom03" placeholder="Avellaneda" required>
+            <div class="invalid-feedback">
+             Ingrese la Ciudad
+            </div>
+          </div>
+          
+          <div class="col-md-3 mb-3">
+            <label for="validationCustom05">Zip</label>
+            <textarea type="text" class="form-control" id="validationCustom05" placeholder="Ingrese su Consulta" ></textarea>
+           
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+            <label class="form-check-label" for="invalidCheck">
+              Acepto las politicas de Privacidad
+            </label>
+            <div class="invalid-feedback">
+              Tenes que estar de acuerdo con la Politica de Privacidad
+            </div>
+          </div>
+        </div>
+        <button class="btn btn-primary" type="submit">Enviar</button>
+      </form>
+      <script>
+      (function() {
+        'use strict';
+        window.addEventListener('load', function() {
+          // Obtencion de los datos del form
+          var forms = document.getElementsByClassName('needs-validation');
+          // Hacer un bucle sobre ellos y evitar que se refresque
+          var validation = Array.prototype.filter.call(forms, function(form) {
+            form.addEventListener('submit', function(event) {
+              if (form.checkValidity() === false) {
+                event.preventDefault();
+                event.stopPropagation();
+              } else {
+                // Agregar el Swal.fire cuando todos los campos estén validados correctamente
+                Swal.fire({
+                  icon: 'success',
+                  title: 'Nos estaremos contactando con usted',
+                  text: 'Tus datos son correctos.',
+                  timer: 8000,
+                  showCancelButton: true,
+                  confirmButtonText: "Contactame"
+                }).then((result) => {
+        if (result.isConfirmed) {
+          window.location.href = 'index.html'; 
+        }
+    })
+              }
+              form.classList.add('was-validated');
+            }, false);
+          });
+        }, false);
+      
+      
+      })();
+      </script>
+      
+    </main>
+    
+    <footer>
+      <h6 class="textofooter">Copyright © 2023. CartuchosVLZ. Todos los derechos reservados.</h6>
+
+  </footer>
+</body>
+</html>

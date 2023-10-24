@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> CARTUCHOS VLZ </title>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="estilos.css">
+    
+    
+</head>
+
+
+<body class="body1">
+    <header class="encabezado">
+        <div>
+            <a href="index.html"> <img class= "medio  logo1 opacidad" src="imagenes/vector-icon-of-printer.jpg"  > </a>
+            <h1 class=" medio cartuchos"> CartuchosVLZ </h1>
+                <a class="aRedes" href="https://www.instagram.com/cartuchosvlz/"> <img class="imgRedes" src="imagenes/instagram.png"> </a>
+                <a class="aRedes" href="https://www.facebook.com/CartuchosVlz"> <img class="imgRedes" src="imagenes/fb.png"> </a>
+                <a class="aRedes" href="https://www.whatsapp.com"> <img class="imgRedes" src="imagenes/whatsapp.png" > </a>
+            
+            <nav class="navbar navbar-dark bg-dark  navbar-expand-lg navbar-light bg-light">
+                <a class="navbar-brand" href="catalogo.html">Catalogo</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarText">
+                  <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                      <a class="nav-link" href="index.html">Inicio <span class="sr-only"></span></a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="Contactanos.html">Contacto</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="ubicacion.html">Ubicacion</a>
+                    </li>
+                  </ul>
+                  <span class="navbar-text container">
+                    Tu impresora no funciona sin nosotros
+                  </span>
+                </div>
+              </nav>
+    </header>
+    <section class="contenido">
+      <div class="mostrador" id="mostrador">
+          <div class="fila">
+              <div class="item" onclick="cargar(this)">
+                  <div class="contenedor-foto">
+                      <img src="imagenes/productos/122combo.jpg" alt="">
+                  </div>
+                  <p class="descripcion">COMBO HP 122XL</p>
+                  <p class=" precio inline">$</p> <span class="precio">1300</span>
+              </div>
+              <div class="item" onclick="cargar(this)">
+                  <div class="contenedor-foto">
+                      <img src="imagenes/productos/664xl.jpg" alt="">
+                  </div>
+                  <p class="descripcion"> COMBO 664XL </p>
+                  <p class=" precio inline">$</p>  <span class="precio">1800</span>
+              </div>
+              <div class="item" onclick="cargar(this)">
+                  <div class="contenedor-foto">
+                      <img src="imagenes/productos/Auriculares Inalambricos Bluetooth 5.0 F9-5 + Power Bank ,resistente al agua.jpeg" alt="">
+                  </div>
+                  <p class="descripcion">AURICULARES INALAMBRICOS
+                  </p>
+                  <p class=" precio inline">$</p> <span class="precio">3600</span>
+              </div>
+              <div class="item" onclick="cargar(this)">
+                  <div class="contenedor-foto">
+                      <img src="imagenes/productos/EPSO.jpg" alt="">
+                  </div>
+                  <p class="descripcion">COMBOX4 EPSON 296xp</p>
+                  <p class=" precio inline">$</p><span class="precio"> 1800</span>
+              </div>
+          </div>
+          <div class="fila">
+              <div class="item" onclick="cargar(this)">
+                  <div class="contenedor-foto">
+                      <img src="imagenes/productos/PackTintas544_1200x1200_PACK.jpg" alt="">
+                  </div>
+                  <p class="descripcion">PACK DE TINTAS EPSON ORIGINALES 544</p>
+                  <p class=" precio inline">$</p> <span class="precio"> 1300</span>
+              </div>
+              <div class="item" onclick="cargar(this)">
+                  <div class="contenedor-foto">
+                      <img src="imagenes/productos/Smartband M5 Smartwacth Podometro Frecuencia Cardiaca Bt DISPONIBLE NEGRO ,AZUL Y  ROJO.jpeg" alt="">
+                  </div>
+                  <p class="descripcion" id="descripcion">SMARTWACTH </p>
+                  <p class=" precio inline">$</p> <span class="precio"> 2000</span>
+              </div>
+              <div class="item" onclick="cargar(this)">
+                  <div class="contenedor-foto">
+                      <img src="imagenes/productos/toner sp.jpg" alt="">
+                  </div>
+                  <p class="descripcion">TONER RICOH 307sp</p>
+                  <p class=" precio inline">$</p><span class="precio"> 2500</span>
+              </div>
+              <div class="item" onclick="cargar(this)">
+                  <div class="contenedor-foto">
+                      <img src="imagenes/productos/vans.jpg" alt="">
+                  </div>
+                  <p class="descripcion">TONER HP 105a SIN CHIP</p>
+                  <p class=" precio inline">$</p><span class="precio"> 1800</span>
+              </div>
+          </div> 
+      </div>
+    
+      <div class="seleccion" id="seleccion">
+          <div class="cerrar" onclick="cerrar(this)">
+              
+          </div>
+          <div class="info">
+              <img src="img/1.png" alt="" id="img">
+              <h2 id="modelo">MODELO 1</h2>
+              <p id="descripcion"></p>
+
+              <span class="precio" id="precio">1300</span>
+
+              <div class="fila">
+                  <div class="select">
+                      <label for="">Cantidad</label>
+                      <select name="cantidad" id="cantidad">
+                          <option value="1">1</option>
+                          <option value="2">2</option>
+                          <option value="3">3</option>
+                          <option value="4">4</option>
+                      </select>
+                  </div>
+                  <div class="fila">
+                    <div class="select">
+                        <label for="cuotas">Cuotas:</label>
+                        <select id="cuotas" name="cuotas">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                        </select>
+                    </div>
+                  <button type="button" target="_blank" onclick="resumen()" >COMPRAR</button>
+              </div>
+          </div>
+      </div>
+  </section>
+    
+    <footer>
+      <h6 class="textofooter">Copyright © 2023. CartuchosVLZ. Todos los derechos reservados.</h6>
+
+  </footer>
+  <script src="pagina.js"></script>
+</body>
+</html>
